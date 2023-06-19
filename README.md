@@ -1,18 +1,19 @@
-# GALILEO
-GALILEO: Gene AccessibiLIty score to Locate Enhancer-of-Origin
+# GREE
+
+Genome-wide cis-Regulatory Element Explorer 
 
 ## Installation
 
-To install GALILEO, first install the devtools package, if it is not already installed:
+To install GREE, first install the devtools package, if it is not already installed:
 
 ```R
 install.packages("devtools") 
 ```
 
-Then, install GALILEO from GitHub:
+Then, install GREE from GitHub:
 
 ```R
-devtools::install_github("Zhao-YY/GALILEO")
+devtools::install_github("Zhao-YY/GREE")
 ```
 
  This should take no more than a few minutes. 
@@ -37,7 +38,7 @@ Thirdly, we filter out the bin that might be noisy, that is, the bin that has a 
 binByGroup_norm_HVbin = getHVbinMatrix(binByGroup_norm,bin_max_thr=7,bin_fc_thr=70)
 ```
 
-Finally, for each gene, GALILEO use `getGeneByGroupMatrix` function to sum the accessibility of highly variable bins that overlaps with the gene window (user-defined, default is 2 kb upstream and downstream of the gene body) and do not cross another gene region. And we can get the GeneByGroup matrix.
+Finally, for each gene, GREE use `getGeneByGroupMatrix` function to sum the accessibility of highly variable bins that overlaps with the gene window (user-defined, default is 2 kb upstream and downstream of the gene body) and do not cross another gene region. And we can get the GeneByGroup matrix.
 
 ```R
 GeneByGroup = getGeneByGroupMatrix(genes,binByGroup_norm_HVbin)
