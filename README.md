@@ -13,7 +13,7 @@ install.packages("devtools")
 Then, install GREE from GitHub:
 
 ```R
-devtools::install_github("Zhao-YY/GREE")
+devtools::install_github("JiekaiLab/GREE")
 ```
 
  This should take no more than a few minutes. 
